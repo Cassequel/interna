@@ -6,6 +6,8 @@ import jobsRouter from './routes/jobs.js';
 import queueRouter from './routes/queue.js';
 import trackerRouter from './routes/tracker.js';
 
+console.log('DATABASE_URL loaded:', !!process.env.DATABASE_URL);
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
