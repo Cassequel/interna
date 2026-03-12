@@ -1,11 +1,16 @@
 {
-  "$schema": "https://railway.app/railway.schema.json",
-  "build": {
-    "builder": "NIXPACKS",
-    "buildCommand": "npm install --prefix client && npm run build --prefix client && npm install --prefix server"
+  "name": "interna",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "npm install --prefix client && npm run build --prefix client && npm install --prefix server",
+    "start": "node server/src/index.js"
   },
-  "deploy": {
-    "startCommand": "node server/src/index.js",
-    "restartPolicyType": "ON_FAILURE"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.12.0"
   }
 }
